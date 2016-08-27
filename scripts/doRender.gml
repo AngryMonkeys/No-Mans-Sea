@@ -1,0 +1,4 @@
+doCleanup();
+generateViewport();
+renderTiles();
+//renderShip();
