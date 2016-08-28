@@ -33,6 +33,7 @@
     </scripts>
     <script>scripts\shipMovement.gml</script>
     <script>scripts\doCleanup.gml</script>
+    <script>scripts\collision.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>

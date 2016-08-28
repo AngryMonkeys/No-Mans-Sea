@@ -1,7 +1,7 @@
 correctMap();
 var buffer = global.edgeBuffer;
-for(var  xx=buffer; xx < global.viewWidth+buffer; xx++){
-  for(var yy =buffer; yy < global.viewHeight+buffer; yy++){
+for(var  xx=0; xx < global.viewWidth+buffer; xx++){
+  for(var yy =0; yy < global.viewHeight+buffer; yy++){
     var tileType = ds_grid_get(global.mapData,xx,yy);
     
     if(tileType=0){
