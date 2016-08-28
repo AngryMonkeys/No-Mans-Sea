@@ -5,3 +5,6 @@ with(obj_tile){
   instance_destroy();
 }
 
+with(obj_wake){
+  instance_destroy();
+}

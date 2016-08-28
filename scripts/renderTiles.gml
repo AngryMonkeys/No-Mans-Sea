@@ -6,7 +6,7 @@ for(var  xx=0; xx < global.viewWidth+buffer; xx++){
     
     if(tileType=0){
       var t = obj_waterTile;
-      var tile = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, t);
+    //  var tile = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, t);
      } else{
       var t = obj_landTile;     
       var tile = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, t);
