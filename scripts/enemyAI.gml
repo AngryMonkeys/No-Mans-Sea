@@ -11,8 +11,15 @@ if(target>current){
 if(target<current){
  // direction-=3;
 }
-mp_potential_settings(15,5,30, 0)
-mp_potential_step_object(player.x, player.y, 1, obj_landTile);
+
+var xoffset = 0;
+var yoffset = 0;
+with(player){
+  xoffset = lengthdir_x(250,direction-180);
+  yoffset = lengthdir_y(250,direction-180);
+}
+mp_potential_settings(6,2,30, 0)
+mp_potential_step_object(player.x+xoffset, player.y+yoffset, 1, obj_landTile);
 
 //var buffer = global.edgeBuffer;
 //var path = path_add();

@@ -63,6 +63,7 @@
         <object>objects\obj_sinking</object>
       </objects>
       <object>objects\obj_ball</object>
+      <object>objects\obj_enemyBall</object>
     </objects>
   </objects>
   <rooms name="rooms">
