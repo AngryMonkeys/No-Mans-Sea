@@ -1,5 +1,5 @@
 
-var waterLevel = 65;
+var waterLevel = 55;
 var viewX = floor(global.currentShipX / global.viewWidth)*global.viewWidth;//round to get teh current viewport
 var viewY = floor(global.currentShipY / global.viewHeight)*global.viewHeight;
 var buffer = global.edgeBuffer;
@@ -19,7 +19,7 @@ for (var xx = viewX-buffer; xx < global.viewWidth + viewX + buffer; xx++) {
 
      //CREATE SHIPS    
     var s = simplex_octave2(xx, yy, global.enemyHash, global.enemyGrad, 0, 100, 8, 0.4, 0.1);
-    if(s>80 && h=0){
+    if(s>85 && h=0){
       ds_grid_set(global.enemyData, xx - viewX+buffer, yy - viewY+buffer, "ship"); 
     } else {
       ds_grid_set(global.enemyData, xx - viewX+buffer, yy - viewY+buffer, ""); 

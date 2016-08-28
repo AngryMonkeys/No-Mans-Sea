@@ -7,6 +7,7 @@ while(!fixed) {
   fixed = true;
   for(var xx =1; xx < global.gridWidth-1; xx++){
     for(var yy = 1; yy < global.gridHeight-1; yy++){
+      
       var counter = 0;
       var cellType = ds_grid_get(global.mapData, xx, yy);
       if(ds_grid_get(global.mapData, xx - 1, yy    ) != cellType) counter ++ ;
@@ -18,7 +19,8 @@ while(!fixed) {
         fixed = false;
         if(cellType==0) ds_grid_set(global.mapData, xx, yy,1);
         if(cellType==1) ds_grid_set(global.mapData, xx, yy,0);
-      }      
+      }
+        
     }
   }
 }

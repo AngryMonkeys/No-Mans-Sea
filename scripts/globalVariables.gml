@@ -1,4 +1,4 @@
-random_set_seed(11)
+random_set_seed(9)
 //randomize(); //TODO: THIS SHOULD USE A random_set_seed(val) instead
 
 global.tileSize = 64;
