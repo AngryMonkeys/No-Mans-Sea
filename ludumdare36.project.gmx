@@ -34,10 +34,14 @@
     </scripts>
     <scripts name="util">
       <script>scripts\stopTexture.gml</script>
+      <script>scripts\doCleanup.gml</script>
+      <script>scripts\drawDevGui.gml</script>
     </scripts>
-    <script>scripts\shipMovement.gml</script>
-    <script>scripts\doCleanup.gml</script>
-    <script>scripts\collision.gml</script>
+    <scripts name="object_behaviour">
+      <script>scripts\enemyAI.gml</script>
+      <script>scripts\collision.gml</script>
+      <script>scripts\shipMovement.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
@@ -47,8 +51,12 @@
       <object>objects\obj_landTile</object>
     </objects>
     <objects name="objects">
-      <object>objects\obj_player</object>
       <object>objects\obj_wake</object>
+      <objects name="ships">
+        <object>objects\obj_ship</object>
+        <object>objects\obj_enemy</object>
+        <object>objects\obj_player</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">

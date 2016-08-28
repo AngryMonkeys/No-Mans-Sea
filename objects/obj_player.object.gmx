@@ -5,75 +5,24 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_ship</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>depth=-1000;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>601</id>
+        <id>604</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_execute_script</functionname>
+        <functionname>action_inherited</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>9</kind>
-            <script>shipMovement</script>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string></string>
-          </argument>
-        </arguments>
       </action>
-    </event>
-    <event eventtype="4" ename="obj_landTile">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -90,12 +39,34 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction+=180;
-show_debug_message("X " + string(x) + " " + string(xprevious))
-show_debug_message("Y " + string(y) + " " + string(yprevious))
-x=xprevious;
-y=yprevious;
-speed=speed/4;
+            <string>
+var outside = false;
+if(x&gt;room_width){
+  outside=true; 
+  global.currentShipX+=global.viewWidth;
+  x=-sprite_width;
+}
+if(x&lt;0-sprite_width){
+  global.currentShipX-=global.viewWidth;
+  outside=true;
+  x=room_width;
+}
+if(y&lt;0-sprite_height){
+  global.currentShipY+=global.viewHeight;
+  outside=true;
+  y=room_height;
+}
+if(y&gt;room_height){
+  global.currentShipY-=global.viewHeight;
+  outside=true;
+  y=-sprite_height;
+}
+global.shipSpeed = speed;
+
+if(outside){
+  show_debug_message(global.currentShipX)
+  doRender();
+}
 </string>
           </argument>
         </arguments>

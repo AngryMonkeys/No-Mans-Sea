@@ -2,8 +2,16 @@ correctMap();
 var buffer = global.edgeBuffer;
 for(var  xx=0; xx < global.viewWidth+buffer; xx++){
   for(var yy =0; yy < global.viewHeight+buffer; yy++){
+    //ADD A SHIP
+    if(ds_grid_get(global.enemyData, xx,yy)="ship"){
+    show_debug_message("ADD A SHIP");
+     var ship = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, obj_enemy);
+      with(ship) {
+        ship.speed=2;
+      }
+     }
+    //SET LAND/WATER
     var tileType = ds_grid_get(global.mapData,xx,yy);
-    
     if(tileType=0){
       var t = obj_waterTile;
     //  var tile = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, t);
@@ -11,6 +19,7 @@ for(var  xx=0; xx < global.viewWidth+buffer; xx++){
       var t = obj_landTile;     
       var tile = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, t);
       with(tile) {
+        depth=0;
         image_yscale = global.tileSize/64;
         image_xscale = global.tileSize/64; //TODO: This is temporary till work work out the scale
         image_index=11;//TODO: set the type of tile in here
