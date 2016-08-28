@@ -3,8 +3,8 @@ random_set_seed(11)
 
 global.tileSize = 64;
 
-global.viewWidth = 10;
-global.viewHeight = 10;
+global.viewWidth = 16;
+global.viewHeight = 12;
 
 global.edgeBuffer = global.viewWidth; // we use this to seek outside the current viewport
 

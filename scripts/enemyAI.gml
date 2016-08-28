@@ -1,27 +1,38 @@
 var player = instance_find(obj_player,0);
-
-//add 360 to the direction, so we don't have to worry about wrapping to 0
-var target = point_direction(x,y,player.x,player.y);
-var current = direction;
-if(target-current>180) current+=360;
-if(current-target>180) target+=360;
-if(target>current){
- // direction+=3;
+if(player==noone){
+  player = instance_create(10000,10000,obj_landTile);
 }
-if(target<current){
- // direction-=3;
-}
-
 var xoffset = 0;
 var yoffset = 0;
 with(player){
-  xoffset = lengthdir_x(250,direction-180);
-  yoffset = lengthdir_y(250,direction-180);
+  xoffset = lengthdir_x(other.xadj,direction);
+  yoffset = lengthdir_y(other.yadj,direction);
 }
 mp_potential_settings(6,2,30, 0)
-mp_potential_step_object(player.x+xoffset, player.y+yoffset, 1, obj_landTile);
+mp_potential_step(player.x+xoffset+(sprite_width/2), player.y+yoffset+(sprite_height/2), 1, false);
 
-//var buffer = global.edgeBuffer;
-//var path = path_add();
-//mp_grid_path(global.mpGrid,path,x+buffer,y+buffer,player.x+buffer,player.y+buffer,false);
-//path_start(path,3,path_action_stop,0)
+
+
+var dist = distance_to_object(player);
+shot--;
+if(dist<200 && shot<=0){
+  shot=40;
+  var dir = direction-90;
+  var odir = direction+90;
+  var xoffset = lengthdir_x(20,direction);
+  var yoffset = lengthdir_y(20,direction);
+  for(var i=-1;i<2;i++){
+    var xpos = x+(sprite_width/2)+ (i*xoffset);
+    var ypos = y+(sprite_height/2)+ (i*yoffset);
+    var ball = instance_create(xpos,ypos,obj_enemyBall);
+    with(ball){
+      direction = dir;
+      speed=10;
+    }
+     var ball2 = instance_create(xpos,ypos,obj_enemyBall);
+    with(ball2){
+      direction = odir;
+      speed=10;
+    }
+  }
+}

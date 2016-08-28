@@ -14,6 +14,7 @@
     <sprite>sprites\enemyShip</sprite>
     <sprite>sprites\spr_cannonBall</sprite>
     <sprite>sprites\sinking</sprite>
+    <sprite>sprites\enemy_sinking</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -61,13 +62,22 @@
         <object>objects\obj_enemy</object>
         <object>objects\obj_player</object>
         <object>objects\obj_sinking</object>
+        <object>objects\obj_enemySinking</object>
+        <object>objects\obj_playerSinking</object>
       </objects>
       <object>objects\obj_ball</object>
       <object>objects\obj_enemyBall</object>
+      <object>objects\obj_solid</object>
+    </objects>
+    <objects name="UI">
+      <object>objects\obj_introButton</object>
+      <object>objects\obj_lost</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_intro</room>
     <room>rooms\rm_gameView</room>
+    <room>rooms\rm_gameOver</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
