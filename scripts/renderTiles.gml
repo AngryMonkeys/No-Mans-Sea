@@ -1,11 +1,11 @@
 correctMap();
 var buffer = global.edgeBuffer;
-for(var  xx=0; xx < global.viewWidth+buffer; xx++){
-  for(var yy =0; yy < global.viewHeight+buffer; yy++){
+for(var  xx=0; xx < global.viewWidth; xx++){
+  for(var yy =0; yy < global.viewHeight; yy++){
     //ADD A SHIP
     if(ds_grid_get(global.enemyData, xx,yy)="ship"){
     show_debug_message("ADD A SHIP");
-     var ship = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, obj_enemy);
+     var ship = instance_create((xx) * global.tileSize, (yy) * global.tileSize, obj_enemy);
       with(ship) {
         ship.speed=2;
       }
@@ -14,10 +14,10 @@ for(var  xx=0; xx < global.viewWidth+buffer; xx++){
     var tileType = ds_grid_get(global.mapData,xx,yy);
     if(tileType=0){
       var t = obj_waterTile;
-    //  var tile = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, t);
+     // var tile = instance_create((xx) * global.tileSize, (yy) * global.tileSize, t);
      } else{
       var t = obj_landTile;     
-      var tile = instance_create((xx-buffer) * global.tileSize, (yy-buffer) * global.tileSize, t);
+      var tile = instance_create((xx) * global.tileSize, (yy) * global.tileSize, t);
       with(tile) {
         depth=0;
         image_yscale = global.tileSize/64;

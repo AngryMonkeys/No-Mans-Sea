@@ -67,7 +67,6 @@
       </objects>
       <object>objects\obj_ball</object>
       <object>objects\obj_enemyBall</object>
-      <object>objects\obj_solid</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_introButton</object>

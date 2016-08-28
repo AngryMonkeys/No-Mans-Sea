@@ -8,8 +8,8 @@ with(player){
   xoffset = lengthdir_x(other.xadj,direction);
   yoffset = lengthdir_y(other.yadj,direction);
 }
-mp_potential_settings(6,2,30, 0)
-mp_potential_step(player.x+xoffset+(sprite_width/2), player.y+yoffset+(sprite_height/2), 1, false);
+mp_potential_settings(6,2,64, 1)
+mp_potential_step_object(player.x+xoffset+(sprite_width/2), player.y+yoffset+(sprite_height/2), 1, obj_landTile);
 
 
 
