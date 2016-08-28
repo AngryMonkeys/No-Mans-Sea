@@ -8,6 +8,9 @@ with(obj_wake){
   instance_destroy();
 }
 
+with(obj_sinking){
+  instance_destroy();
+}
 with(obj_enemy){
   instance_destroy();
 }

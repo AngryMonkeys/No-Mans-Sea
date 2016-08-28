@@ -107,6 +107,7 @@
             <string>hp -=1;
 
 if(hp=0){
+  instance_create(x,y,obj_sinking);
   instance_destroy();
 }
 with(other){

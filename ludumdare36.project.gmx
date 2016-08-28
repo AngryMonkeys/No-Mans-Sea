@@ -13,6 +13,7 @@
     <sprite>sprites\spr_wake</sprite>
     <sprite>sprites\enemyShip</sprite>
     <sprite>sprites\spr_cannonBall</sprite>
+    <sprite>sprites\sinking</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -59,6 +60,7 @@
         <object>objects\obj_ship</object>
         <object>objects\obj_enemy</object>
         <object>objects\obj_player</object>
+        <object>objects\obj_sinking</object>
       </objects>
       <object>objects\obj_ball</object>
     </objects>

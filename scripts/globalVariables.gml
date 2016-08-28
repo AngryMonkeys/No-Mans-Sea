@@ -27,5 +27,5 @@ global.currentShipY = 0;
 global.initialiseShip = true;
 
 global.shipSpeed = 0;
-global.shipPower = 5;
+global.shipPower = 3;
 global.wakeLife=20;
