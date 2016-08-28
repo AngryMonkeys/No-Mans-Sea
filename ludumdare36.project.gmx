@@ -11,6 +11,8 @@
     <sprite>sprites\land_bkup</sprite>
     <sprite>sprites\spr_boat</sprite>
     <sprite>sprites\spr_wake</sprite>
+    <sprite>sprites\enemyShip</sprite>
+    <sprite>sprites\spr_cannonBall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -41,6 +43,7 @@
       <script>scripts\enemyAI.gml</script>
       <script>scripts\collision.gml</script>
       <script>scripts\shipMovement.gml</script>
+      <script>scripts\cannon.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -57,6 +60,7 @@
         <object>objects\obj_enemy</object>
         <object>objects\obj_player</object>
       </objects>
+      <object>objects\obj_ball</object>
     </objects>
   </objects>
   <rooms name="rooms">

@@ -11,7 +11,7 @@ if(target>current){
 if(target<current){
  // direction-=3;
 }
-mp_potential_settings(15,5,64, 0)
+mp_potential_settings(15,5,30, 0)
 mp_potential_step_object(player.x, player.y, 1, obj_landTile);
 
 //var buffer = global.edgeBuffer;
