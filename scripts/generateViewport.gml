@@ -122,14 +122,14 @@ if(sd>0.31){
               } else {
                 p=obj_soldout;
               }
-              var pup = instance_create(port.x, port.y, p);
+              var pup = instance_create(port.x, port.y+10, p);
               with(pup){
                 depth= -100;
-                image_speed=0.8;
+                image_speed=0.3;
                 if(offset){
-                  x+=32;
+                  x+=16;
                 } else {
-                  x-=64
+                  x-=48
                 }
               }
             }
