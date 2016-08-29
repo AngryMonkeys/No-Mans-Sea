@@ -17,6 +17,7 @@ var dist = distance_to_object(player);
 shot--;
 if(dist<200 && shot<=0){
   shot=40;
+  audio_play_sound(snd_canon2,1,false);
   var dir = direction-90;
   var odir = direction+90;
   var xoffset = lengthdir_x(20,direction);

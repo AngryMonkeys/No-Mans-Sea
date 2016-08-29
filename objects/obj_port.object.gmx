@@ -89,12 +89,14 @@
           <argument>
             <kind>1</kind>
             <string>var cleanup=false;
-if(powerup="heart"){
+if(powerup="heart" &amp;&amp; other.hp&lt;100){
   other.hp=other.maxHealth;
   cleanup=true;
+  audio_play_sound(snd_health,1,false);
 } else if(powerup="upgrade"){
   other.level++;
   cleanup=true;
+    audio_play_sound(snd_powerup,1,false);
 }
 
 if(cleanup) {

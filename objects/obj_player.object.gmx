@@ -90,11 +90,11 @@ if(outside){
           <argument>
             <kind>1</kind>
             <string>hp -=5;
-
+audio_play_sound(snd_hit,1,false);
 if(hp=0){
   instance_create(x,y,obj_playerSinking);
   instance_destroy();
-
+audio_play_sound(snd_sink2,1,false);
 }
 with(other){
   instance_destroy();

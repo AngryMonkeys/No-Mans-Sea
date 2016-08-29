@@ -134,9 +134,10 @@ yadj = irandom_range(100,200);
             <kind>1</kind>
             <string>hp -=10;
 score+=10;
-
+audio_play_sound(snd_hit,1,false);
 if(hp&lt;=0){
   global.sunk++;
+  audio_play_sound(snd_sink2,1,false);
   instance_create(x,y,obj_enemySinking);
   instance_destroy();
 }

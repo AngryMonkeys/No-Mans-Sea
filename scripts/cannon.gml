@@ -6,6 +6,8 @@ if(level>2) si=-1;
 
 if(shot<=0){
 shot=30;
+
+  audio_play_sound(snd_canon2,1,false);
   var dir = direction-90;
   var odir = direction+90;
   var xoffset = lengthdir_x(20,direction);

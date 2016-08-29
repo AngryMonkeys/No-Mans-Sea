@@ -4,7 +4,15 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_sink</sound>
+    <sound>sound\snd_sink2</sound>
+    <sound>sound\snd_canon</sound>
+    <sound>sound\snd_canon2</sound>
+    <sound>sound\snd_hit</sound>
+    <sound>sound\snd_health</sound>
+    <sound>sound\snd_powerup</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="ships">
       <sprite>sprites\sinking</sprite>
