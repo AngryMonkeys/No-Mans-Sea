@@ -95,6 +95,7 @@
       <object>objects\obj_introButton</object>
       <object>objects\obj_lost</object>
       <object>objects\obj_intro</object>
+      <object>objects\obj_frame</object>
     </objects>
   </objects>
   <rooms name="rooms">
