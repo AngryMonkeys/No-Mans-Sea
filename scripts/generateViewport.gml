@@ -8,6 +8,9 @@ var buffer = global.edgeBuffer;
 var tc = global.viewWidth*global.viewHeight;
 var viewDist = sqrt(power(worldX,2) + power(worldY,2) );    
     show_debug_message("VIEW " + string(viewDist));
+    
+var shade = max(0,255-viewDist);
+background_blend[0] = make_colour_rgb(shade,shade,shade);
 
 ds_grid_clear(global.enemyData,0);
 

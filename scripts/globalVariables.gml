@@ -1,7 +1,7 @@
 random_set_seed(9)
 //randomize(); //TODO: THIS SHOULD USE A random_set_seed(val) instead
 draw_set_font(fnt_pirate);
-
+draw_set_color(c_ltgray);
 global.tileSize = 64;
 
 global.viewWidth = 16;
