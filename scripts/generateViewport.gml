@@ -129,7 +129,8 @@ if(sd>0.31){
                 if(offset){
                   x+=12;
                 } else {
-                  x-=48
+                  x-=16
+                  image_xscale=-1;
                 }
               }
             }

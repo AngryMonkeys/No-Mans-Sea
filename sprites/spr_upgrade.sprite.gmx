@@ -7,19 +7,32 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>3</bbox_left>
-  <bbox_right>25</bbox_right>
-  <bbox_top>2</bbox_top>
-  <bbox_bottom>27</bbox_bottom>
+  <bbox_left>7</bbox_left>
+  <bbox_right>40</bbox_right>
+  <bbox_top>0</bbox_top>
+  <bbox_bottom>43</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>32</width>
-  <height>32</height>
+  <width>48</width>
+  <height>48</height>
   <frames>
     <frame index="0">images\spr_upgrade_0.png</frame>
+    <frame index="1">images\spr_upgrade_1.png</frame>
+    <frame index="2">images\spr_upgrade_2.png</frame>
+    <frame index="3">images\spr_upgrade_3.png</frame>
+    <frame index="4">images\spr_upgrade_4.png</frame>
+    <frame index="5">images\spr_upgrade_5.png</frame>
+    <frame index="6">images\spr_upgrade_6.png</frame>
+    <frame index="7">images\spr_upgrade_7.png</frame>
+    <frame index="8">images\spr_upgrade_8.png</frame>
+    <frame index="9">images\spr_upgrade_9.png</frame>
+    <frame index="10">images\spr_upgrade_10.png</frame>
+    <frame index="11">images\spr_upgrade_11.png</frame>
+    <frame index="12">images\spr_upgrade_12.png</frame>
+    <frame index="13">images\spr_upgrade_13.png</frame>
   </frames>
 </sprite>

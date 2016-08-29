@@ -120,11 +120,7 @@ if(cleanup) {
   with(obj_powerup){
     instance_destroy();
   }
-   var pup = instance_create(x, y, obj_soldout);
-    with(pup){
-      depth= -100;
-      image_speed=0.8;
-    }
+
   powerup = "";
   ds_map_replace(global.portHistory, key, powerup );
 }
