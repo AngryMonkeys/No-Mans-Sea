@@ -23,6 +23,10 @@ with(obj_ball){
 with(obj_enemy){
   instance_destroy();
 }
+with(obj_trees){
+  instance_destroy();
+}
+
 
 with(obj_powerup){
   instance_destroy();

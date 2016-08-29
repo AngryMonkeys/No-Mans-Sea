@@ -89,7 +89,7 @@
           <argument>
             <kind>1</kind>
             <string>var cleanup=false;
-if(powerup="heart" &amp;&amp; other.hp&lt;100){
+if(powerup="heart"){
   other.hp=other.maxHealth;
   for(var i=0;i&lt;instance_number(obj_friendly); i++){
       //if it's level &lt;3,increase it

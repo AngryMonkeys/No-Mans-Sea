@@ -225,7 +225,7 @@ if(speed&lt;0) speed = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction-=3;
+            <string>direction-=4;
 </string>
           </argument>
         </arguments>
@@ -273,7 +273,7 @@ if(speed&gt;global.shipPower) speed = global.shipPower;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>direction+=3;
+            <string>direction+=4;
 </string>
           </argument>
         </arguments>
