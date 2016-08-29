@@ -94,8 +94,25 @@ if(powerup="heart" &amp;&amp; other.hp&lt;100){
   cleanup=true;
   audio_play_sound(snd_health,1,false);
 } else if(powerup="upgrade"){
-  other.level++;
+  global.level++;
   cleanup=true;
+  //if level&gt;3
+  if(global.level&gt;3){
+    //loop through friendlies
+    var done =false;
+    for(var i=0;i&lt;instance_number(obj_friendly); i++){
+      //if it's level &lt;3,increase it
+      var friendly = instance_find(obj_friendly,i);
+      if(friendly.level&lt;3){
+        friendly.level++;
+        done = true;
+      }
+    }
+    //if all friendlies are level 3, then create new friendly    
+    if(!done){
+      instance_create(0,0,obj_friendly);
+    }
+  }
     audio_play_sound(snd_powerup,1,false);
 }
 

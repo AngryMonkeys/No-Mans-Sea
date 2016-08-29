@@ -30,7 +30,8 @@ global.currentShipY = 0;
 global.initialiseShip = true;
 
 global.sunk=100;
-
+global.level = 3;
+global.friendlyList = ds_map_create();
 global.shipSpeed = 0;
 global.shipPower = 5;
 global.wakeLife=20;

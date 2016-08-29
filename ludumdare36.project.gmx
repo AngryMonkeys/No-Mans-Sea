@@ -68,6 +68,7 @@
     </scripts>
     <scripts name="object_behaviour">
       <script>scripts\enemyAI.gml</script>
+      <script>scripts\friendly_AI.gml</script>
       <script>scripts\collision.gml</script>
       <script>scripts\shipMovement.gml</script>
       <script>scripts\cannon.gml</script>
@@ -93,6 +94,7 @@
         <object>objects\obj_sinking</object>
         <object>objects\obj_enemySinking</object>
         <object>objects\obj_playerSinking</object>
+        <object>objects\obj_friendly</object>
       </objects>
       <object>objects\obj_ball</object>
       <object>objects\obj_enemyBall</object>

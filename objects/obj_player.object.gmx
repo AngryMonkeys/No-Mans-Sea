@@ -44,27 +44,42 @@ var outside = false;
 if(x&gt;room_width){
   outside=true; 
   global.currentShipX+=global.viewWidth;
+ for(var i=0;i&lt;instance_number(obj_friendly); i++){
+    var friendly = instance_find(obj_friendly,i);
+    friendly.x -=view_wview;
+  }
   x=-sprite_width;
 }
 if(x&lt;0-sprite_width){
   global.currentShipX-=global.viewWidth;
+  for(var i=0;i&lt;instance_number(obj_friendly); i++){
+    var friendly = instance_find(obj_friendly,i);
+    friendly.x +=view_wview;
+  }
   outside=true;
   x=room_width;
 }
 if(y&lt;0-sprite_height){
   global.currentShipY+=global.viewHeight;
+  for(var i=0;i&lt;instance_number(obj_friendly); i++){
+    var friendly = instance_find(obj_friendly,i);
+    friendly.y += view_hview;
+  }
   outside=true;
   y=room_height;
 }
 if(y&gt;room_height){
   global.currentShipY-=global.viewHeight;
+  for(var i=0;i&lt;instance_number(obj_friendly); i++){
+    var friendly = instance_find(obj_friendly,i);
+    friendly.y -= view_hview;
+  }
   outside=true;
   y=-sprite_height;
 }
 global.shipSpeed = speed;
 
 if(outside){
-  show_debug_message(global.currentShipX)
   doRender();
 }
 </string>
