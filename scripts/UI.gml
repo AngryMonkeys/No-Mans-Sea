@@ -1,5 +1,5 @@
-draw_text(20,20, "SCALLYWAGS SUNK:");
-draw_text(250,20, string(global.sunk));
+draw_text(40,30, "SCALLYWAGS LEFT:");
+draw_text(270,30, string(global.sunk));
 
-draw_text(20,40, "YE OLDE POINTS: ");
-draw_text(250,40, string(score))
+draw_text(40,60, "YE OLDE POINTS: ");
+draw_text(270,60, string(score))

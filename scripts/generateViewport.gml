@@ -127,7 +127,7 @@ if(sd>0.31){
                 depth= -100;
                 image_speed=0.3;
                 if(offset){
-                  x+=16;
+                  x+=12;
                 } else {
                   x-=48
                 }

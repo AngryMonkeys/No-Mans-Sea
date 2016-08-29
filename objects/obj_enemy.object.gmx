@@ -136,10 +136,13 @@ yadj = irandom_range(100,200);
 score+=10;
 audio_play_sound(snd_hit,1,false);
 if(hp&lt;=0){
-  global.sunk++;
+  global.sunk--;
   audio_play_sound(snd_sink2,1,false);
   instance_create(x,y,obj_enemySinking);
   instance_destroy();
+  if(global.sunk&lt;=0){
+    room_goto(rm_win);
+  }
 }
 with(other){
   instance_destroy();

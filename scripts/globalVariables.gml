@@ -29,7 +29,7 @@ global.currentShipY = 0;
 
 global.initialiseShip = true;
 
-global.sunk=0;
+global.sunk=100;
 
 global.shipSpeed = 0;
 global.shipPower = 5;

@@ -12,6 +12,7 @@
     <sound>sound\snd_hit</sound>
     <sound>sound\snd_health</sound>
     <sound>sound\snd_powerup</sound>
+    <sound>sound\snd_musix</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="ships">
@@ -35,6 +36,8 @@
       <sprite>sprites\spr_soldout</sprite>
       <sprite>sprites\spr_upgrade</sprite>
     </sprites>
+    <sprite>sprites\spr_win</sprite>
+    <sprite>sprites\spr_fail</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -104,12 +107,14 @@
       <object>objects\obj_lost</object>
       <object>objects\obj_intro</object>
       <object>objects\obj_frame</object>
+      <object>objects\obj_win</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>
     <room>rooms\rm_gameView</room>
     <room>rooms\rm_gameOver</room>
+    <room>rooms\rm_win</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
