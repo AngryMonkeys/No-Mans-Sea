@@ -9,7 +9,7 @@ var tc = global.viewWidth*global.viewHeight;
 var viewDist = sqrt(power(worldX,2) + power(worldY,2) );    
     show_debug_message("VIEW " + string(viewDist));
     
-var shade = max(0,255-viewDist);
+var shade = max(0,255-(viewDist*2));
 background_blend[0] = make_colour_rgb(shade,shade,shade);
 
 ds_grid_clear(global.enemyData,0);
@@ -42,7 +42,6 @@ for (var xx = viewX+1; xx < viewX + global.viewWidth -1; xx++) {
   }
 }
 var sd = ds_grid_get_mean(global.enemyData,0,0,global.viewWidth, global.viewHeight);
-show_debug_message("SD  " + string(sd));
 
 if(sd>0.31){
   var shipMax = ceil(viewDist/5);
