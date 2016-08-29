@@ -3,13 +3,13 @@ var buffer = global.edgeBuffer;
 for(var  xx=0; xx < global.viewWidth; xx++){
   for(var yy =0; yy < global.viewHeight; yy++){
     //ADD A SHIP
-    if(ds_grid_get(global.enemyData, xx,yy)="ship"){
+   /*if(ds_grid_get(global.enemyData, xx,yy)="ship"){
     show_debug_message("ADD A SHIP");
      var ship = instance_create((xx) * global.tileSize, (yy) * global.tileSize, obj_enemy);
       with(ship) {
         ship.speed=2;
       }
-     }
+     }*/
     //SET LAND/WATER
     var tileType = ds_grid_get(global.mapData,xx,yy);
     if(tileType=0){

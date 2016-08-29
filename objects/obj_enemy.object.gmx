@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>var pos= irandom(3)
+key=0;
 shot=0;
 xadj=0
 yadj=0
@@ -132,14 +133,19 @@ yadj = irandom_range(100,200);
           <argument>
             <kind>1</kind>
             <string>hp -=10;
+score+=10;
 
 if(hp=0){
+  global.sunk++;
   instance_create(x,y,obj_enemySinking);
   instance_destroy();
 }
 with(other){
   instance_destroy();
 }
+
+ds_map_replace(global.enemyHistory, key + "health", hp);
+show_debug_message("HELATH " + string(hp))
 </string>
           </argument>
         </arguments>

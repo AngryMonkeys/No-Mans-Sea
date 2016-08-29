@@ -6,15 +6,27 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
+    <sprites name="ships">
+      <sprite>sprites\sinking</sprite>
+      <sprite>sprites\spr_boat</sprite>
+      <sprite>sprites\enemy_sinking</sprite>
+      <sprite>sprites\enemyShip</sprite>
+    </sprites>
+    <sprites name="ui">
+      <sprite>sprites\spr_frame</sprite>
+      <sprite>sprites\spr_intro</sprite>
+    </sprites>
     <sprite>sprites\spr_waterTile</sprite>
-    <sprite>sprites\spr_landTile</sprite>
-    <sprite>sprites\land_bkup</sprite>
-    <sprite>sprites\spr_boat</sprite>
-    <sprite>sprites\spr_wake</sprite>
-    <sprite>sprites\enemyShip</sprite>
-    <sprite>sprites\spr_cannonBall</sprite>
-    <sprite>sprites\sinking</sprite>
-    <sprite>sprites\enemy_sinking</sprite>
+    <sprites name="objects">
+      <sprite>sprites\spr_cannonBall</sprite>
+      <sprite>sprites\spr_wake</sprite>
+      <sprite>sprites\spr_landTile</sprite>
+      <sprite>sprites\land_bkup</sprite>
+      <sprite>sprites\spr_port</sprite>
+      <sprite>sprites\spr_heart</sprite>
+      <sprite>sprites\spr_soldout</sprite>
+      <sprite>sprites\spr_upgrade</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -46,8 +58,12 @@
       <script>scripts\collision.gml</script>
       <script>scripts\shipMovement.gml</script>
       <script>scripts\cannon.gml</script>
+      <script>scripts\UI.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_pirate</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_gameManager</object>
     <objects name="tiles">
@@ -67,10 +83,18 @@
       </objects>
       <object>objects\obj_ball</object>
       <object>objects\obj_enemyBall</object>
+      <object>objects\obj_port</object>
+      <objects name="powerups">
+        <object>objects\obj_heart</object>
+        <object>objects\obj_powerup</object>
+        <object>objects\obj_soldout</object>
+        <object>objects\obj_upgrade</object>
+      </objects>
     </objects>
     <objects name="UI">
       <object>objects\obj_introButton</object>
       <object>objects\obj_lost</object>
+      <object>objects\obj_intro</object>
     </objects>
   </objects>
   <rooms name="rooms">

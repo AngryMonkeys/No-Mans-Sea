@@ -67,7 +67,9 @@
             <kind>1</kind>
             <string>depth=-1000;
 hp=100;
+maxHealth=100;
 shot=0;
+level=1;
 </string>
           </argument>
         </arguments>
@@ -132,7 +134,8 @@ shot=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_healthbar(x+40,y+120,x+88,y+125,hp,c_black,c_red,c_lime,0,true,true);
+            <string>var val =  (hp / maxHealth) * 100
+draw_healthbar(x+40,y+120,x+88,y+125,val,c_black,c_red,c_lime,0,true,true);
 </string>
           </argument>
         </arguments>
