@@ -135,7 +135,7 @@ yadj = irandom_range(100,200);
             <string>hp -=10;
 score+=10;
 
-if(hp=0){
+if(hp&lt;=0){
   global.sunk++;
   instance_create(x,y,obj_enemySinking);
   instance_destroy();
