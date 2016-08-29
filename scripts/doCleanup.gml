@@ -11,6 +11,9 @@ with(obj_enemy){
   instance_destroy();
 }
 
+with(obj_waves){
+  instance_destroy();
+}
 with(obj_enemyBall){
   instance_destroy();
 }

@@ -1,5 +1,12 @@
 correctMap();
 var buffer = global.edgeBuffer;
+
+var w = irandom_range(3,6);
+for(var i=0;i<w;i++){
+  instance_create(irandom_range(-400,700),irandom_range(-400,500),obj_waves);
+}
+
+var treecount=0;
 for(var  xx=0; xx < global.viewWidth; xx++){
   for(var yy =0; yy < global.viewHeight; yy++){
     //ADD A SHIP
@@ -83,7 +90,16 @@ for(var  xx=0; xx < global.viewWidth; xx++){
           if(left && !right && up && !down){
             image_index=15;
           }
-          
+          if(image_index =8){
+          treecount++;
+            if((xx+treecount) mod 3 = 1){
+              instance_create((xx-0.5) * global.tileSize, (yy-0.5) * global.tileSize, obj_fern);
+    
+            } else {
+            instance_create((xx-0.5) * global.tileSize, (yy-0.5) * global.tileSize, obj_palm);
+            
+            }
+          }
         }     
       }
     }

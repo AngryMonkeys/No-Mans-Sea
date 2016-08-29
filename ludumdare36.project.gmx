@@ -38,6 +38,9 @@
       <sprite>sprites\spr_upgrade</sprite>
       <sprite>sprites\spr_deadHeart</sprite>
       <sprite>sprites\spr_deadupgrade</sprite>
+      <sprite>sprites\sp_waves</sprite>
+      <sprite>sprites\spr_fern</sprite>
+      <sprite>sprites\spr_palm</sprite>
     </sprites>
     <sprite>sprites\spr_win</sprite>
     <sprite>sprites\spr_fail</sprite>
@@ -86,6 +89,7 @@
       <object>objects\obj_tile</object>
       <object>objects\obj_waterTile</object>
       <object>objects\obj_landTile</object>
+      <object>objects\obj_waves</object>
     </objects>
     <objects name="objects">
       <object>objects\obj_wake</object>
@@ -108,6 +112,8 @@
         <object>objects\obj_soldout</object>
         <object>objects\obj_upgrade</object>
       </objects>
+      <object>objects\obj_fern</object>
+      <object>objects\obj_palm</object>
     </objects>
     <objects name="UI">
       <object>objects\obj_introButton</object>
