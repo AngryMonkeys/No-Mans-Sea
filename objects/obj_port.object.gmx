@@ -91,6 +91,11 @@
             <string>var cleanup=false;
 if(powerup="heart" &amp;&amp; other.hp&lt;100){
   other.hp=other.maxHealth;
+  for(var i=0;i&lt;instance_number(obj_friendly); i++){
+      //if it's level &lt;3,increase it
+    var friendly = instance_find(obj_friendly,i);
+    friendly.hp=100;
+   }
   cleanup=true;
   audio_play_sound(snd_health,1,false);
 } else if(powerup="upgrade"){
@@ -110,7 +115,7 @@ if(powerup="heart" &amp;&amp; other.hp&lt;100){
     }
     //if all friendlies are level 3, then create new friendly    
     if(!done){
-      instance_create(0,0,obj_friendly);
+      instance_create(-64,300,obj_friendly);
     }
   }
     audio_play_sound(snd_powerup,1,false);

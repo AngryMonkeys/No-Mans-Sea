@@ -62,7 +62,7 @@ with(wake){
   image_angle = other.direction;
   image_alpha=0.5
   image_yscale=0.01;
-  image_xscale = shipSpeed;
+  image_xscale = shipSpeed*2;
 }
 
 

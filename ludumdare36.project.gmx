@@ -96,6 +96,7 @@
         <object>objects\obj_sinking</object>
         <object>objects\obj_enemySinking</object>
         <object>objects\obj_playerSinking</object>
+        <object>objects\obj_friendlySinking</object>
         <object>objects\obj_friendly</object>
       </objects>
       <object>objects\obj_ball</object>

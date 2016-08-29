@@ -65,7 +65,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>maxLife = global.wakeLife* global.shipSpeed;
+            <string>maxLife = global.wakeLife* 7;
 life = maxLife;
 </string>
           </argument>

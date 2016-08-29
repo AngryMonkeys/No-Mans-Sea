@@ -129,7 +129,7 @@ audio_play_sound(snd_hit,1,false);
 if(hp&lt;=0){
   global.sunk--;
   audio_play_sound(snd_sink2,1,false);
-  instance_create(x,y,obj_playerSinking);
+  instance_create(x,y,obj_friendlySinking);
   instance_destroy();
 }
 with(other){
